@@ -1,9 +1,8 @@
 
 
-function TabButton({children, onSelect, isSelected}) {
-    console.log('TabButton 컴포넌트 렌더링됨') ;
+function TabButton({children, isSelected, ...props}) {
     return(
-        <li><button className={isSelected ? 'active':null} onClick={onSelect}>{children}</button></li>
+        <li><button className={isSelected ? 'active':null} {...props}>{children}</button></li>
     )
 }
 
